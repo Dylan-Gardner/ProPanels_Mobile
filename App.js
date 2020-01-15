@@ -3,6 +3,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import Header from './Header'
 import AlbumArt from './AlbumArt'
 import TrackDetails from './TrackDetails'
+import Controls from './Controls'
+import Slider from './Slider'
 
 export default function App() {
   return (
@@ -10,6 +12,8 @@ export default function App() {
       <Header/>
       <AlbumArt/>
       <TrackDetails/>
+      <Slider/>
+      <Controls />
     </View>
   );
 }

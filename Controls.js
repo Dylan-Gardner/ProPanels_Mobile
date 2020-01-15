@@ -1,11 +1,20 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native'
+import { Icon } from 'react-native-elements';
 
 export default class Controls extends Component {
     render(){
         return(
             <View style={styles.container}>
-                
+                <TouchableOpacity>
+                  <Icon name='skip-previous' type='material-icons' size={40} color='white'/>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.playButton}>
+                  <Icon name='pause-circle-filled' type='material-icons' size={90} color='white'/>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                  <Icon name='skip-next' type='material-icons' size={40} color='white'/>
+                </TouchableOpacity>
             </View>
         );
     }
@@ -19,19 +28,9 @@ const styles = StyleSheet.create({
       paddingTop: 8,
     },
     playButton: {
-      height: 72,
-      width: 72,
-      borderWidth: 1,
-      borderColor: 'white',
-      borderRadius: 72 / 2,
       alignItems: 'center',
       justifyContent: 'center',
-    },
-    secondaryControl: {
-      height: 18,
-      width: 18,
-    },
-    off: {
-      opacity: 0.30,
+      paddingLeft: 20,
+      paddingRight: 20
     }
   })
