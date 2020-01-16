@@ -25,10 +25,11 @@ function pad(n, width, z=0) {
                     maximumValue={Math.max(trackLength, 1, currentPosition + 1)}
                     value={currentPosition}
                     style={styles.slider}
+                    thumbTintColor='#fff'
                     minimumTrackTintColor='#fff'
-                    maximumTrackTintColor='rgba(255, 255, 255, 0.14)'
+                    maximumTrackTintColor='rgba(255, 255, 255, 0.3)'
                     />
-                <View style={{flexDirection: 'row'}}>
+                <View style={styles.textCont}>
                     <Text style={styles.text}>
                         {elapsed[0] + ":" + elapsed[1]}
                     </Text>
@@ -51,20 +52,15 @@ const styles = StyleSheet.create({
       paddingRight: 30,
       paddingTop: 16,
     },
-    track: {
-      height: 2,
-      borderRadius: 1,
-    },
-    thumb: {
-      width: 10,
-      height: 10,
-      borderRadius: 5,
-      backgroundColor: 'white',
-    },
     text: {
       color: 'rgba(255, 255, 255, 0.72)',
       fontSize: 13,
       textAlign:'center',
+    },
+    textCont: {
+      flexDirection: 'row',
+      paddingLeft: 15,
+      paddingRight: 15
     }
   });
 

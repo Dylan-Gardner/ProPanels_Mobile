@@ -9,7 +9,7 @@ export default class Header extends Component {
                 <TouchableOpacity>
                     <Icon style={styles.button}name="angle-down" type='font-awesome' size={24} color="white"/>
                 </TouchableOpacity>
-                <Text style={styles.message}> Header</Text>
+                <Text style={styles.message}> {this.props.message}</Text>
                 <TouchableOpacity>
                     <Icon style={styles.button}name='queue-music' type='material-icons' size={24} color='white' />
                 </TouchableOpacity>

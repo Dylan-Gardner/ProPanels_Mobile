@@ -6,6 +6,9 @@ export default class Controls extends Component {
     render(){
         return(
             <View style={styles.container}>
+                <TouchableOpacity style={styles.smallButtons}>
+                  <Icon name='shuffle' type='material-icons' size={30} color='white' />
+                </TouchableOpacity>
                 <TouchableOpacity>
                   <Icon name='skip-previous' type='material-icons' size={40} color='white'/>
                 </TouchableOpacity>
@@ -14,6 +17,9 @@ export default class Controls extends Component {
                 </TouchableOpacity>
                 <TouchableOpacity>
                   <Icon name='skip-next' type='material-icons' size={40} color='white'/>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.smallButtons}>
+                  <Icon name='repeat' type='material-icons' size={30} color='white'/>
                 </TouchableOpacity>
             </View>
         );
@@ -30,6 +36,10 @@ const styles = StyleSheet.create({
     playButton: {
       alignItems: 'center',
       justifyContent: 'center',
+      paddingLeft: 20,
+      paddingRight: 20
+    },
+    smallButtons: {
       paddingLeft: 20,
       paddingRight: 20
     }

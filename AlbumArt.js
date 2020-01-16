@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, Image, TouchableOpacity, Dimensions} from 'react-native'
+import {View, StyleSheet, Image, Dimensions} from 'react-native'
 
 export default class AlbumArt extends Component {
     render(){
         return(
             <View style={styles.container}>
-                <Image style={styles.image} source={require('./kingkrule.jpg')} />
+                <Image style={styles.image} source={this.props.url} />
             </View>
         );
     }

@@ -7,8 +7,8 @@ export default class TrackDetails extends Component {
         return(
             <View style={styles.container}>
                 <View style={styles.detailsWrapper}>
-                    <Text style={styles.title}>Song</Text>
-                    <Text style={styles.artist}>Artist</Text>
+        <Text style={styles.title}>{this.props.title}</Text>
+                    <Text style={styles.artist}>{this.props.artist}</Text>
                 </View>
                 <TouchableOpacity>
                     <Icon type='font-awesome' style={styles.button} name='heart-o' size={22} color='white' />
