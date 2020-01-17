@@ -15,15 +15,15 @@ function pad(n, width, z=0) {
 
   export default class Header extends Component {
     render(){
-        var currentPosition = 20;
-        var trackLength=200;
-        const elapsed = minutesAndSeconds(currentPosition);
-        const remaining = minutesAndSeconds(trackLength - currentPosition);
+        const elapsed = minutesAndSeconds(this.props.currentPosition);
+        const remaining = minutesAndSeconds(this.props.trackLength - this.props.currentPosition);
         return(
             <View style={styles.container}>
                 <Slider
-                    maximumValue={Math.max(trackLength, 1, currentPosition + 1)}
-                    value={currentPosition}
+                    onSlidingStart={this.props.onSlidingStart}
+                    onSlidingComplete={this.props.onSeek}
+                    maximumValue={Math.max(this.props.trackLength, 1, this.props.currentPosition + 1)}
+                    value={this.props.currentPosition}
                     style={styles.slider}
                     thumbTintColor='#fff'
                     minimumTrackTintColor='#fff'
@@ -35,7 +35,7 @@ function pad(n, width, z=0) {
                     </Text>
                     <View style={{flex: 1}} />
                     <Text style={[styles.text, {width: 40}]}>
-                        {trackLength > 1 && "-" + remaining[0] + ":" + remaining[1]}
+                        {this.props.trackLength > 1 && "-" + remaining[0] + ":" + remaining[1]}
                     </Text>
                 </View>
             </View>

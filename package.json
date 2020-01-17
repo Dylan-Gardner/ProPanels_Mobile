@@ -7,14 +7,22 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "devtools": "react-devtools"
   },
   "dependencies": {
     "@react-native-community/slider": "^2.0.8",
+    "electron": "^7.1.9",
     "react": "16.9.0",
-    "react-native": "0.61.5",
+    "react-native": "^0.61.5",
+    "react-native-dynamic-vector-icons": "^0.2.1",
     "react-native-elements": "^1.2.7",
-    "react-native-vector-icons": "^6.6.0"
+    "react-native-events": "^1.0.15",
+    "react-native-helpers": "0.0.2",
+    "react-native-improved-text-input": "0.0.1",
+    "react-native-login-screen": "^0.3.2",
+    "react-native-vector-icons": "^6.6.0",
+    "rn-spotify-sdk": "^1.2.13"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
@@ -24,6 +32,7 @@
     "eslint": "^6.5.1",
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.56.0",
+    "react-devtools": "^3.6.3",
     "react-test-renderer": "16.9.0"
   },
   "jest": {

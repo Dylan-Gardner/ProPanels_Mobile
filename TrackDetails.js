@@ -7,11 +7,14 @@ export default class TrackDetails extends Component {
         return(
             <View style={styles.container}>
                 <View style={styles.detailsWrapper}>
-        <Text style={styles.title}>{this.props.title}</Text>
+                    <Text style={styles.title}>{this.props.title}</Text>
                     <Text style={styles.artist}>{this.props.artist}</Text>
                 </View>
-                <TouchableOpacity>
-                    <Icon type='font-awesome' style={styles.button} name='heart-o' size={22} color='white' />
+                <TouchableOpacity onPress={this.props.likedCallback}>
+                  { !this.props.liked ?
+                    <Icon type='font-awesome' style={styles.button} name='heart-o' size={22} color='white' /> :
+                    <Icon type='font-awesome' style={styles.button} name='heart' size={22} color='green' />
+                  }
                 </TouchableOpacity>
             </View>
         );
